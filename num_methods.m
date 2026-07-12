@@ -1,6 +1,4 @@
 %{
-file: num_methods_lab2.m
-
 basically, here's how these two algorithms work:
 
 1. robust quad roots (prob 1): finding roots for ax^2+bx+c but bulletproofed. first, it scales down the coeffs by dividing by their max val so we don't hit overflow/underflow with crazy big or small numbers. if a is 0, it just solves it as a linear eq. if the roots are real, it uses an alt version of the quadratic formula depending on the sign of 'b' to completely dodge catastrophic cancellation (which kills precision). returns a flag (0 for real, 1 for complex) plus the roots.
